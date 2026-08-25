@@ -78,32 +78,22 @@ flowchart TD
 
 ---
 
-## 🛠️ Hardware
+## 🛠️ Hardware Architecture
 
-| Component | Role in the system |
-|---|---|
-| **ESP32 (DOIT DEVKIT V1)** | Main controller — Wi-Fi connectivity, sensor polling, decision logic |
-| **Capacitive/Resistive Soil Moisture Sensor** | Measures volumetric soil water content |
-| **DHT11 Sensor** | Ambient temperature & humidity, used as secondary context for decisions |
-| **GPS Module** | Resolves device location for the weather API call |
-| **Relay Module** | Switches the water pump on/off under ESP32 control |
-| **Mini DC Water Pump** | Delivers water to the plant |
-| **20×4 I2C LCD** | On-device status, menu, and forecast display |
-| **5× Push Buttons (Menu / Up / Down / Select)** | Local navigation and manual override |
-| **Battery Pack** | Portable power for the controller |
+### Components Required
 
-**Pin mapping (as wired in the prototype):**
-
-```
-Soil Moisture Sensor → GPIO 34 (analog in)
-DHT11                → GPIO 4
-Relay (pump control) → GPIO 5
-Menu button           → GPIO 12
-Up button             → GPIO 14
-Down button           → GPIO 26
-Select button         → GPIO 25
-```
-
+| Component | Budget (Est.) | Function |
+| :--- | :--- | :--- |
+| **NodeMCU – ESP 32** | ₹250 | The brain of the system (Wi-Fi + Processing) |
+| **Soil Moisture Sensor** | ₹35 | Measures volumetric water content in soil |
+| **Mini Micro Pump DC (3-6V)** | ₹60 | Delivers water to the plant roots |
+| **Solid State Relay (SSR)** | ₹45 | Controls the high-power water pump |
+| **DHT11 Sensor** | ₹50 | Measures ambient Temperature and Humidity |
+| **LCD Display (I2C)** | ₹120 | Displays status, menu, and weather data |
+| **Power Supply/Battery** | ₹100 | Powers the microcontroller and pump |
+| **Connecting Wires** | ₹65 | System integration |
+| **Others** | ₹70 | Enclosure and misc. hardware |
+| **Total** | **~₹795** | |
 ---
 
 ## 💻 Software Stack
@@ -156,10 +146,9 @@ Select button         → GPIO 25
 
 </div>
 
-> GitHub-flavored Markdown does not execute JavaScript, so a true sliding carousel can't run natively in this file. The anchors above give left/right-style navigation by jumping directly to each image — the closest GitHub-native equivalent to arrow controls.
 
 <details>
-<summary><b>📸 Quick-scan grid (all four side by side)</b></summary>
+
 <br/>
 
 | Full Assembly | Category Menu | Live Status | Forecast Screen |
@@ -168,54 +157,37 @@ Select button         → GPIO 25
 
 </details>
 
-### Required folder structure for the images above
-
-```
-i-CropWat/
-├── README.md
-└── assets/
-    ├── prototype-1.jpg   # Full hardware assembly next to the plant
-    ├── prototype-2.jpg   # LCD — category selection menu
-    ├── prototype-3.jpg   # LCD — live sensor & irrigation status
-    └── prototype-4.jpg   # LCD — weather forecast + IMMEDIATE WATER flag
-```
-
-Place your four prototype photos in an `assets/` folder at the repo root using the exact filenames above (or update the `src` paths in the gallery section to match your own names).
 
 ---
+## 🔌 Hardware + Software Kickoff
 
-## 🚀 Getting Started
+**1. Clone the Repository**
 
-### 1. Clone the repository
-```bash
+​```bash
 git clone https://github.com/mukherjeesuchetana514-maker/i-CropWat.git
-cd i-CropWat
-```
+​```
 
-### 2. Wire the hardware
-Connect components per the [pin mapping table](#-hardware) above.
+**2. Wire Up the Hardware**
+- Connect the **Soil Sensor** signal pin to `GPIO 34`.
+- Connect the **DHT11** data pin to `GPIO 4`.
+- Connect the **Relay** control pin to `GPIO 5`.
+- Wire the **Keypad** to `GPIO 12` (Menu), `GPIO 14` (Up), `GPIO 26` (Down), `GPIO 25` (Select).
 
-### 3. Install the required libraries
-In Arduino IDE: **Sketch → Include Library → Manage Libraries**, then install:
-- ArduinoJson
-- LiquidCrystal_I2C
-- DHT sensor library
-- Blynk (BlynkSimpleEsp32)
+**3. Add Your Credentials**
+- Open `i_Cropwat.ino` in the Arduino IDE.
+- Replace the placeholder values below with your own Wi-Fi, Blynk, and weather-API keys before flashing:
 
-### 4. Configure your credentials
-Open the firmware `.ino` file and set:
-```cpp
-char   BLYNK_AUTH[]  = "YOUR_BLYNK_AUTH_TOKEN";
+​```cpp
+char   BLYNK_AUTH[]   = "YOUR_BLYNK_AUTH_TOKEN";
 const char* WIFI_SSID = "YOUR_WIFI_NAME";
 const char* WIFI_PASS = "YOUR_WIFI_PASSWORD";
-const char* WEATHER_API_KEY = "YOUR_WEATHER_API_KEY";
-```
+const char* OWM_APIKEY = "YOUR_WEATHERAPI_KEY";
+​```
 
-### 5. Flash the board
-- **Board:** `DOIT ESP32 DEVKIT V1`
-- Select the correct COM port and upload.
-
----
+**4. Flash the Board**
+- Board: `DOIT ESP32 DEVKIT V1`
+- Select the correct port, then **Upload**.
+  
 
 ## 📲 Usage
 
@@ -246,8 +218,9 @@ const char* WEATHER_API_KEY = "YOUR_WEATHER_API_KEY";
 
 | Name | Roll |
 |---|---|
-| Suchetana Mukherjee | BTECH/IT/24/074 |
 | Sukanya Rana | BTECH/IT/24/087 |
+| Suchetana Mukherjee | BTECH/IT/24/074 |
+
 
 **Project Supervisor:** Mr. Mojammel Rahaman, Assistant Professor, Dept. of Basic Science & Humanities, MCKVIE
 
