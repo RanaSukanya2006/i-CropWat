@@ -1,6 +1,9 @@
 <div align="center">
 
-# 🌱 i-CropWat
+<img src="assets/logo.png" width="150" alt="i-CropWat logo">
+
+
+
 
 ### Weather-Aware Smart Irrigation for Real Farms and Real Gardens
 
@@ -94,6 +97,19 @@ flowchart TD
 | **Connecting Wires** | ₹65 | System integration |
 | **Others** | ₹70 | Enclosure and misc. hardware |
 | **Total** | **~₹795** | |
+
+**Pin mapping (as wired in the prototype):**
+
+```
+Soil Moisture Sensor → GPIO 34 (analog in)
+DHT11                → GPIO 4
+Relay (pump control) → GPIO 5
+Menu button           → GPIO 12
+Up button             → GPIO 14
+Down button           → GPIO 26
+Select button         → GPIO 25
+```
+
 ---
 
 ## 💻 Software Stack
@@ -146,9 +162,10 @@ flowchart TD
 
 </div>
 
+> GitHub-flavored Markdown does not execute JavaScript, so a true sliding carousel can't run natively in this file. The anchors above give left/right-style navigation by jumping directly to each image — the closest GitHub-native equivalent to arrow controls.
 
 <details>
-
+<summary><b>📸 Quick-scan grid (all four side by side)</b></summary>
 <br/>
 
 | Full Assembly | Category Menu | Live Status | Forecast Screen |
@@ -157,15 +174,29 @@ flowchart TD
 
 </details>
 
+### Required folder structure for the images above
+
+```
+i-CropWat/
+├── README.md
+└── assets/
+    ├── prototype-1.jpg   # Full hardware assembly next to the plant
+    ├── prototype-2.jpg   # LCD — category selection menu
+    ├── prototype-3.jpg   # LCD — live sensor & irrigation status
+    └── prototype-4.jpg   # LCD — weather forecast + IMMEDIATE WATER flag
+```
+
+Place your four prototype photos in an `assets/` folder at the repo root using the exact filenames above (or update the `src` paths in the gallery section to match your own names).
 
 ---
-## 🔌 Hardware + Software Kickoff
+
+## 🚀 Installation & Setup
 
 **1. Clone the Repository**
 
-​```bash
+```bash
 git clone https://github.com/mukherjeesuchetana514-maker/i-CropWat.git
-​```
+```
 
 **2. Wire Up the Hardware**
 - Connect the **Soil Sensor** signal pin to `GPIO 34`.
@@ -177,17 +208,18 @@ git clone https://github.com/mukherjeesuchetana514-maker/i-CropWat.git
 - Open `i_Cropwat.ino` in the Arduino IDE.
 - Replace the placeholder values below with your own Wi-Fi, Blynk, and weather-API keys before flashing:
 
-​```cpp
+```cpp
 char   BLYNK_AUTH[]   = "YOUR_BLYNK_AUTH_TOKEN";
 const char* WIFI_SSID = "YOUR_WIFI_NAME";
 const char* WIFI_PASS = "YOUR_WIFI_PASSWORD";
 const char* OWM_APIKEY = "YOUR_WEATHERAPI_KEY";
-​```
+```
 
 **4. Flash the Board**
 - Board: `DOIT ESP32 DEVKIT V1`
 - Select the correct port, then **Upload**.
-  
+
+---
 
 ## 📲 Usage
 
@@ -218,9 +250,8 @@ const char* OWM_APIKEY = "YOUR_WEATHERAPI_KEY";
 
 | Name | Roll |
 |---|---|
-| Sukanya Rana | BTECH/IT/24/087 |
 | Suchetana Mukherjee | BTECH/IT/24/074 |
-
+| Sukanya Rana | BTECH/IT/24/087 |
 
 **Project Supervisor:** Mr. Mojammel Rahaman, Assistant Professor, Dept. of Basic Science & Humanities, MCKVIE
 
