@@ -98,17 +98,6 @@ flowchart TD
 | **Others** | ₹70 | Enclosure and misc. hardware |
 | **Total** | **~₹795** | |
 
-**Pin mapping (as wired in the prototype):**
-
-```
-Soil Moisture Sensor → GPIO 34 (analog in)
-DHT11                → GPIO 4
-Relay (pump control) → GPIO 5
-Menu button           → GPIO 12
-Up button             → GPIO 14
-Down button           → GPIO 26
-Select button         → GPIO 25
-```
 
 ---
 
@@ -190,7 +179,7 @@ Place your four prototype photos in an `assets/` folder at the repo root using t
 
 ---
 
-## 🚀 Installation & Setup
+## 🔌 Hardware + Software Kickoff
 
 **1. Clone the Repository**
 
