@@ -2,6 +2,10 @@
 
 <img src="assets/logo.png" width="150" alt="i-CropWat logo">
 
+<h2><font color="#4DBD33">iCropWat</font></h2>
+
+
+
 
 
 
@@ -239,10 +243,11 @@ const char* OWM_APIKEY = "YOUR_WEATHERAPI_KEY";
 
 | Name | Roll |
 |---|---|
-| Suchetana Mukherjee | BTECH/IT/24/074 |
 | Sukanya Rana | BTECH/IT/24/087 |
+| Suchetana Mukherjee | BTECH/IT/24/074 |
 
-**Project Supervisor:** Mr. Mojammel Rahaman, Assistant Professor, Dept. of Basic Science & Humanities, MCKVIE
+
+** Project Supervisor:** Mr. Mojammel Rahaman, Assistant Professor, Dept. of Basic Science & Humanities, MCKVIE
 
 ---
 
