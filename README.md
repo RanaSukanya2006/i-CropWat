@@ -57,7 +57,7 @@ i-CropWat's answer to this is a small decision engine that sits between the sens
 - **📱 Remote Monitoring via Blynk** — Soil moisture, temperature, and humidity are pushed to the Blynk app for off-site monitoring.
 - **🔘 Manual Override** — Physical buttons allow re-selecting a plant/category or resetting the current cycle without touching the code.
 
-> No feature above goes beyond what the device is shown doing on its own screen in the [prototype gallery](#-prototype-gallery) — this README does not add capabilities the hardware doesn't have.
+
 
 ---
 
