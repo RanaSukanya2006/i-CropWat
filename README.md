@@ -119,53 +119,23 @@ flowchart TD
 
 ---
 
+
 ## 🖼️ Prototype Gallery
 
 <div align="center">
 
-<a name="img-1"></a>
-<img src="assets/prototype-1.jpg" width="560" alt="i-CropWat full hardware assembly next to a potted plant"><br/>
-<sub><b>1 / 4 — Full Assembly.</b> Controller enclosure wired to the soil probe inserted directly into the potted plant.</sub>
+| **1. Full Assembly** | **2. Category Menu** |
+| :---: | :---: |
+| <img src="assets/prototype-1.jpg" width="400" alt="Full Assembly"> | <img src="assets/prototype-2.jpg" width="400" alt="Category Menu"> |
+| *Controller enclosure wired to the soil probe in the potted plant.* | *On-device selection screen (`Crops` / `Flowers` / `Default`) via keypad.* |
 
-<p><a href="#img-4">⬅ Prev</a> &nbsp;•&nbsp; <a href="#img-2">Next ➡</a></p>
-
-<br/>
-
-<a name="img-2"></a>
-<img src="assets/prototype-2.jpg" width="560" alt="LCD showing the category selection menu"><br/>
-<sub><b>2 / 4 — Category Menu.</b> On-device selection screen (<code>Crops</code> / <code>Flowers</code> / <code>Default</code>) driven by the 5-button keypad.</sub>
-
-<p><a href="#img-1">⬅ Prev</a> &nbsp;•&nbsp; <a href="#img-3">Next ➡</a></p>
-
-<br/>
-
-<a name="img-3"></a>
-<img src="assets/prototype-3.jpg" width="560" alt="LCD showing live sensor readings and irrigation status"><br/>
-<sub><b>3 / 4 — Live Status Screen.</b> Soil moisture, humidity, temperature, relay/pump state, selected plant, and its moisture threshold, all in one view.</sub>
-
-<p><a href="#img-2">⬅ Prev</a> &nbsp;•&nbsp; <a href="#img-4">Next ➡</a></p>
-
-<br/>
-
-<a name="img-4"></a>
-<img src="assets/prototype-4.jpg" width="560" alt="LCD showing weather forecast and immediate watering flag"><br/>
-<sub><b>4 / 4 — Forecast Screen.</b> Resolved location, rain status, rain probability, and an <code>IMMEDIATE WATER</code> flag for time-critical decisions.</sub>
-
-<p><a href="#img-3">⬅ Prev</a> &nbsp;•&nbsp; <a href="#img-1">Next ➡</a></p>
+| **3. Live Status Screen** | **4. Forecast Screen** |
+| :---: | :---: |
+| <img src="assets/prototype-3.jpg" width="400" alt="Live Status"> | <img src="assets/prototype-4.jpg" width="400" alt="Forecast Screen"> |
+| *Soil moisture, temp, humidity, relay state, and plant threshold.* | *Resolved location, rain probability, and `IMMEDIATE WATER` flag.* |
 
 </div>
 
-> GitHub-flavored Markdown does not execute JavaScript, so a true sliding carousel can't run natively in this file. The anchors above give left/right-style navigation by jumping directly to each image — the closest GitHub-native equivalent to arrow controls.
-
-<details>
-<summary><b>📸 Quick-scan grid (all four side by side)</b></summary>
-<br/>
-
-| Full Assembly | Category Menu | Live Status | Forecast Screen |
-|:---:|:---:|:---:|:---:|
-| <img src="assets/prototype-1.jpg" width="200"> | <img src="assets/prototype-2.jpg" width="200"> | <img src="assets/prototype-3.jpg" width="200"> | <img src="assets/prototype-4.jpg" width="200"> |
-
-</details>
 
 ### Required folder structure for the images above
 
