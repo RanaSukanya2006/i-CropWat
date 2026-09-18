@@ -247,11 +247,7 @@ const char* OWM_APIKEY = "YOUR_WEATHERAPI_KEY";
 | Suchetana Mukherjee | BTECH/IT/24/074 |
 
 
-### Project Supervisor: **Mr. Mojammel Rahaman, Assistant Professor, Dept. of Basic Science & Humanities, MCKVIE**
-
-> 👨‍🏫 **Project Supervisor:** **Mr. Mojammel Rahaman**  
-> *Assistant Professor, Dept. of Basic Science & Humanities, MCKVIE*
-
+### 🎓 Guided & Supervised By:  **Mr. Mojammel Rahaman,** *(Assistant Professor, Dept. of Basic Science & Humanities, MCKVIE)*
 ---
 
 ## 📄 License
