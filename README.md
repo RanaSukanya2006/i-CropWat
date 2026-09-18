@@ -44,22 +44,24 @@ This repository documents a **working prototype**, built and tested by two IT-de
 
 i-CropWat's answer to this is a small decision engine that sits between the sensors and the pump — described below.
 
----
+
 
 ## ✨ Key Features
 
-- **🧠 Weather-Aware Decisions** — Before triggering a scheduled watering, the ESP32 calls a weather API for the device's GPS-derived location and checks the rain probability. A likely rain event postpones watering.
-- **🌾 Plant-Specific Moisture Thresholds** — Each plant profile (e.g. Wheat) carries its own "water when below X% moisture" threshold, shown live on the LCD as `Th: XX%`.
-- **🖥️ On-Device Menu System** — A 20×4 LCD + 5-button keypad lets the user pick a **Category** (`Crops` / `Flowers` / `Default`) and then a specific plant, entirely offline.
-- **📟 Live Status Display** — A single screen shows soil moisture, humidity, temperature, relay/pump state, selected plant, and its threshold in one glance (`M:`, `H:`, `T:`, `Relay:`, `Pump:`, `Plant:`, `Th:`).
-- **🌦️ Forecast Readout on the Device** — A dedicated screen shows the resolved city, rain status, rain probability, and forecast time window, alongside an `IMMEDIATE WATER` flag when action is required right now.
-- **🚨 Safety Cutoffs** — Watering starts automatically when soil moisture falls below the plant's threshold, and stops automatically once the target is met — protecting against both underwatering and waterlogging.
-- **📱 Remote Monitoring via Blynk** — Soil moisture, temperature, and humidity are pushed to the Blynk app for off-site monitoring.
-- **🔘 Manual Override** — Physical buttons allow re-selecting a plant/category or resetting the current cycle without touching the code.
+<div align="center">
 
+| Feature | Description |
+| :--- | :--- |
+| 🧠 **Weather-Aware Decisions** | Before triggering watering, the ESP32 checks rain probability via a weather API for the device's location to prevent water waste. |
+| 🌾 **Plant-Specific Thresholds** | Each plant profile carries its own custom moisture threshold (e.g., `Th: XX%`) tailored to its watering requirements. |
+| 🖥️ **On-Device Menu System** | A 20×4 LCD and 5-button keypad allow users to select Categories (`Crops`/`Flowers`/`Default`) and plants entirely offline. |
+| 📟 **Live Status Display** | View soil moisture, humidity, temperature, pump state, selected plant, and threshold (`M:`, `H:`, `T:`, `Plant:`) at a single glance. |
+| 🌦️ **Forecast Readout** | A dedicated screen displays resolved city data, rain status, time windows, and an `IMMEDIATE WATER` emergency flag. |
+| 🚨 **Automatic Safety Cutoffs** | Intelligent automation starts the pump below the threshold and stops it safely once target moisture is met to avoid waterlogging. |
+| 📱 **Remote Monitoring** | Live soil moisture, temperature, and humidity metrics are seamlessly pushed to the **Blynk** app for off-site tracking. |
+| 🔘 **Manual Override** | Physical hardware buttons allow immediate re-selection of plants or resetting of active cycles without reflashing the code. |
 
-
----
+</div>
 
 ## ⚙️ How It Works
 
