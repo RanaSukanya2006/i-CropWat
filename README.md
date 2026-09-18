@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/logo1.png" width="300" alt="i-CropWat logo">
+<img src="assets/logo1.png" width="350" alt="i-CropWat logo">
 
 
 
