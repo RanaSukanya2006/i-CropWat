@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="assets/logo1.png" width="500" alt="i-CropWat logo">
+<img src="assets/logo1.png" width="300" alt="i-CropWat logo">
 
-<h2><font color="#4DBD33">iCropWat</font></h2>
+
 
 
 
